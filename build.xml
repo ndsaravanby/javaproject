@@ -1,4 +1,6 @@
 <project name="vlc-media" basedir="." default="jar">
+<taskdef resource="net/sf/antcontrib/antcontrib.properties"/>
+<property file="build.properties"/>
 <target name="clean"> 
 <delete dir="build/class"/>
 </target>
@@ -10,6 +12,20 @@
 <javac srcdir="src" destdir="build/class"/>
 </target>
 <target name="jar" depends="compile">
-<jar basedir="build/class" destfile="build/jar/release15.0.jar"/>
+<jar basedir="${source}" destfile="build/jar/release15.0.jar"/>
 </target>
+<target name="contrib">
+<if>
+ <equals arg1="win" arg2="win" />
+ <then>
+   <echo message="The value of property win" />
+ </then>
+ <else>
+   <echo message="The value of property foo is not bar" />
+ </else>
+</if>
+</target>
+
+
+
 </project>

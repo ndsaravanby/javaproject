@@ -1,0 +1,13 @@
+<project name="first-project" default="prop">
+<property name="os" value="ubuntu-linux"/>
+<target name="prop">
+<echo> value of os is ${os} </echo>
+</target>
+
+<property file="build.properties"/>
+<target name="prop1">
+<echo> the value of name is ${name} </echo>
+
+</target>
+
+</project>
