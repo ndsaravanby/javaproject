@@ -1,0 +1,15 @@
+<project name="vlc-media" basedir="." default="jar">
+<target name="clean"> 
+<delete dir="build/class"/>
+</target>
+<target name="init" depends="clean">
+<mkdir dir="build/class"/>
+<mkdir dir="build/jar"/>
+</target>
+<target name="compile" depends="init">
+<javac srcdir="src" destdir="build/class"/>
+</target>
+<target name="jar" depends="compile">
+<jar basedir="build/class" destfile="build/jar/release15.0.jar"/>
+</target>
+</project>
