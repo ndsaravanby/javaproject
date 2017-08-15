@@ -1,0 +1,5 @@
+<project name="first-project" default="compile">
+<target name="compile">
+<echo> this is project2 </echo>
+</target>
+</project>

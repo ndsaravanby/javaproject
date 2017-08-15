@@ -1,0 +1,7 @@
+<project name="first-project" default="master">
+<target name="master">
+<ant antfile="project1/build.xml" target="compile"/>
+<ant antfile="project2/build.xml" target="compile"/>
+<ant antfile="project3/build.xml" target="compile"/> 
+</target>
+</project>
